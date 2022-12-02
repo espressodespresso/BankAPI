@@ -55,7 +55,7 @@ catch (ArgumentException ex)
 
 #### AccountService
 
-* **.GetAccountAsync<T>(int customerid, AccountType type)** -> Returns an object of whatever is specified as T (Get Request)
+* **.GetAccountAsync`<T>`(int customerid, AccountType type)** -> Returns an object of whatever is specified as T (Get Request)
 * **.UpdateBalanceAsync(int customerid, float withdrawAmount, AccountType type)** -> Withdrawls the amount specified, retuns a string (Put Request)
 * **.TransferFundsAsync(int customerid, float amount, int recieveid, AccountType type)** -> Transfered amount specified between accounts, returns a string (Put Request)
 
@@ -65,9 +65,9 @@ catch (ArgumentException ex)
 * **.UpdateActiveAsync(int customer, bool active)** -> Update whether a card is active (Put Request)
 
 #### UserService
-* **.CustomerGetRequestAsync<T>(int customerid, string additonalPath)** -> Multi-role function, see below (Get Request)
-  * <Customer>(int ..., string "") -> Returns a Customer object
-  * <float>(int ..., string "overdraftlimit/") -> Returns the overdraftlimit for the specified customer 
+* **.CustomerGetRequestAsync`<T>`(int customerid, string additonalPath)** -> Multi-role function, see below (Get Request)
+  * `<Customer>`(int ..., string "") -> Returns a Customer object
+  * `<float>`(int ..., string "overdraftlimit/") -> Returns the overdraftlimit for the specified customer 
   * `<List<Transaction>>`(int ..., string "statement/"> -> Returns a list (maximum of 10) Transaction objects
 * **.GetEmployeeAsync(int employeeid, string password)** -> Returns a Employee object (Get Request)
 * **.UpdateCustomerValueAsync(int customerid, string value, string insert)** -> Updates a customers value in the database (See below for values) (Put Request)
