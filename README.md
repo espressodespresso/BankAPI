@@ -52,3 +52,5 @@ catch (ArgumentException ex)
 * **.CreateCustomerAsync(Customer customer)** -> Creates a new customer in the database (Post Request)
 * **.CreateEmployeeAsync(Employee employee)** -> Creates a new employee in the database (Post Request)
  
+## To Do
+Clean up classes ( Some are a mess )
