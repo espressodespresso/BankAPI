@@ -82,4 +82,4 @@ catch (ArgumentException ex)
 * **.CreateEmployeeAsync(Employee employee)** -> Creates a new employee in the database (Post Request)
  
 ## To Do
-Clean up classes ( Some are a mess )
+Clean up classes ( Some are a mess, especially mongo don't look )
