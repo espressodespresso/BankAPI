@@ -22,7 +22,7 @@ catch (ArgumentException ex)
 ```
 
 ## Available Calls
-> T can be defined by the model classes Account(Deposit Account), CurrentAccount or LTDepositAccount. AccountTypes are either DEPOSITACCOUNT, CURRENTACCOUNT or LTDEPOSITACCOUNT. Both are required... sorry
+> T is defined by the model classes Account(Deposit Account), CurrentAccount or LTDepositAccount. AccountTypes are either DEPOSITACCOUNT, CURRENTACCOUNT or LTDEPOSITACCOUNT. Both are required... sorry
 
 #### AccountService
 
