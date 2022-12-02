@@ -3,7 +3,36 @@ University Project, API built for Banking App Project using ASP .NET Web API typ
 
 ## Instructions
 * Add the BankAPI to your solution
-* Add the API & Models folders to your existing solution
+* Add the API & Models folders to your existing project
+* In your existing projects Program.cs file, add the following (assuming .NET 6):
+```
+RunAsync().GetAwaiter().GetResult();
+
+static async Task RunAsync()
+{
+    // Ensures compatibility with Linux & MacOS for localhost usage
+    clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+    client.BaseAddress = new Uri("https://localhost:7036");
+    client.DefaultRequestHeaders.Accept.Clear();
+    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+}
+
+public partial class Program
+{
+    private static HttpClientHandler clientHandler = new HttpClientHandler();
+    public static HttpClient client = new HttpClient(clientHandler);
+}
+```
+* If adding the code above causes an error, you need to get `Microsoft.AspNet.WebApi.Client` from NuGet
+* If using in the context of the university project, you'll need to modify the partial program class to the following:
+```
+public partial class Program
+{
+    public static User user;
+    private static HttpClientHandler clientHandler = new HttpClientHandler();
+    public static HttpClient client = new HttpClient(clientHandler);
+}
+```
 * Run the API project & have fun interacting with the service classes (See below on how to call)
 
 ## Important
