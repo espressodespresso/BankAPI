@@ -68,7 +68,7 @@ catch (ArgumentException ex)
 * **.CustomerGetRequestAsync<T>(int customerid, string additonalPath)** -> Multi-role function, see below (Get Request)
   * <Customer>(int ..., string "") -> Returns a Customer object
   * <float>(int ..., string "overdraftlimit/") -> Returns the overdraftlimit for the specified customer 
-  * <List<Transaction>>(int ..., string "statement/"> -> Returns a list (maximum of 10) Transaction objects
+  * <List <Transaction> >(int ..., string "statement/"> -> Returns a list (maximum of 10) Transaction objects
 * **.GetEmployeeAsync(int employeeid, string password)** -> Returns a Employee object (Get Request)
 * **.UpdateCustomerValueAsync(int customerid, string value, string insert)** -> Updates a customers value in the database (See below for values) (Put Request)
   * firstName -> string
