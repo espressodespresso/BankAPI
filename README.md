@@ -33,6 +33,7 @@ public partial class Program
     public static HttpClient client = new HttpClient(clientHandler);
 }
 ```
+* Within the BankAPI Project, go to Etc/MongoDatabase.cs and add your connectionString
 * Run the API project & have fun interacting with the service classes (See below on how to call)
 
 ## Important
