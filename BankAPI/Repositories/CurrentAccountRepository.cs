@@ -93,4 +93,28 @@ internal class CurrentAccountRepository
             throw ex;
         }
     }
+    
+    public string UpdateActive(int customerID, bool value)
+    {
+        try
+        {
+            CurrentAccount account = new CurrentAccount(customerID);
+            if (account.Active && value)
+            {
+                throw new ArgumentException("Account is already activated!");
+            }
+
+            if (!account.Active && !value)
+            {
+                throw new ArgumentException("Account is already deactivated!");
+            }
+
+            Program.MongoDb.UpdateBoolRecord<BsonDocument>("Accounts", "id", account.ID, "active", value);
+            return "Successfully updated active value";
+        }
+        catch (InvalidOperationException)
+        {
+            throw new ArgumentException("Account does not exist");
+        }
+    }
 }

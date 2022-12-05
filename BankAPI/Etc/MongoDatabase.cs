@@ -5,7 +5,7 @@ namespace BankAPI;
 
 public class MongoDatabase
 { 
-    private static string connectionString = "mongodb+srv://accessUser:3faBaKiDkSYSBdLL@cluster0.9xgsxv2.mongodb.net/?retryWrites=true&w=majority";
+    private static string connectionString = "CONNECTIONSTRINGHERE";
     private static MongoClient mongoClient;
     private IMongoDatabase db;
 

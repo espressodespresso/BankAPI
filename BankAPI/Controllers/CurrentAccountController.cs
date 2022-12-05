@@ -62,4 +62,18 @@ public class CurrentAccountController : Controller
             return Problem(ex.Message);
         }
     }
+    
+    [HttpPut("active/{customerid}")]
+    public IActionResult Active([FromBody] bool value, int customerid)
+    {
+        try
+        {
+            var result = _currentAccountRepository.UpdateActive(customerid, value);
+            return Ok(result);
+        }
+        catch (ArgumentException ex)
+        {
+            return Problem(ex.Message);
+        }
+    }
 }
