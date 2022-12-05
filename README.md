@@ -59,6 +59,7 @@ catch (ArgumentException ex)
 * **.GetAccountAsync`<T>`(int customerid, AccountType type)** -> Returns an object of whatever is specified as T (Get Request)
 * **.UpdateBalanceAsync(int customerid, float withdrawAmount, AccountType type)** -> Withdrawls the amount specified, retuns a string (Put Request)
 * **.TransferFundsAsync(int customerid, float amount, int recieveid, AccountType type)** -> Transfered amount specified between accounts, returns a string (Put Request)
+* **.UpdateActiveAsync(int customerid, bool value, AccountType type)** -> Modifies the active value for accounts in the database, returns a string (Put Request)
 
 #### CardService
 * **.GetCardAsync(int customerid)** -> Returns a Card object (Get Request)
